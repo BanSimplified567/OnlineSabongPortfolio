@@ -14,13 +14,20 @@
     sans-serif;
   --font-paragraph: "Merriweather", serif;
 
-  --font-xxl: 7rem;
-  --font-xl: 5rem;
-  --font-lg: 3rem;
-  --font-md: 2rem;
-  --font-sm: 1.5rem;
-  --font-xs: 1rem;
-  --font-xxs: 0.8rem;
+  --font-xxl: clamp(3rem, 5vw + 3rem, 7rem);
+  /* Min size: 3rem, Preferred size: 5vw + 3rem, Max size: 7rem */
+  --font-xl: clamp(2rem, 4vw + 2rem, 5rem);
+  /* Min size: 2rem, Preferred size: 4vw + 2rem, Max size: 5rem */
+  --font-lg: clamp(1.5rem, 3vw + 1.5rem, 3rem);
+  /* Min size: 1.5rem, Preferred size: 3vw + 1.5rem, Max size: 3rem */
+  --font-md: clamp(1rem, 2vw + 1rem, 2rem);
+  /* Min size: 1rem, Preferred size: 2vw + 1rem, Max size: 2rem */
+  --font-sm: clamp(0.8rem, 1.5vw + 0.8rem, 1.5rem);
+  /* Min size: 0.8rem, Preferred size: 1.5vw + 0.8rem, Max size: 1.5rem */
+  --font-xs: clamp(0.7rem, 1vw + 0.7rem, 1rem);
+  /* Min size: 0.7rem, Preferred size: 1vw + 0.7rem, Max size: 1rem */
+  --font-xxs: clamp(0.6rem, 0.5vw + 0.6rem, 0.8rem);
+  /* Min size: 0.6rem, Preferred size: 0.5vw + 0.6rem, Max size: 0.8rem */
 }
 
 * {
@@ -601,6 +608,12 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media screen and (max-width: 580px) {
+  .footer-container {
+    justify-content: flex-start;
+  }
 }
 
 .footer-container h1:hover {
