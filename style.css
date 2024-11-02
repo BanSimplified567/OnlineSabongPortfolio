@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika:wght@300..700&display=swap');
+
+:root {
+  --bg-color: #080808;
+  --text-color: #FFF;
+  --bg-color-secondary: #c4c4c4;
+  --bg-color-tertiary: #909090;
+
+  --font-title: "Bebas Neue",
+    sans-serif;
+  --font-paragraph: "Merriweather", serif;
+
+  --font-xxl: 7rem;
+  --font-xl: 5rem;
+  --font-lg: 3rem;
+  --font-m: 2rem;
+  --font-s: 1.5rem;
+  --font-xs: 1rem;
+  --font-xxs: 0.8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-paragraph);
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: solid 1px var(--bg-color-secondary);
+}
+
+@media screen and (max-width: 678px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+}
+
+header h1 {
+  font-family: var(--font-paragraph);
+}
+
+header img {
+  width: 5rem;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+
+a {
+  position: relative;
+  font-family: var(--font-paragraph);
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+  /* Smooth line animation */
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  color: #62BA1B;
+  /* Optional: Change text color on hover */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  /* Line expands fully on hover */
+}
+
+h1 {
+  font-family: var(--font-title);
+}
+
+p {
+  font-family: var(--font-paragraph);
+}
+
+
+/* Container Styles */
+.section-one-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section-one-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Section Article Styling */
+.section-one-article {
+  padding-right: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.section-one-article h1 {
+  line-height: .9;
+  font-size: var(--font-xxl);
+}
+
+.section-one-article h1 span {
+  -webkit-text-stroke: greenyellow 0.5px;
+}
+
+.section-one-article p {
+  font-size: var(--font-xxs);
+}
+
+.section-one-article button {
+  padding: 1rem 5rem;
+  background-color: #62BA1B;
+  color: var(--text-color);
+  font-family: var(--font-paragraph);
+  font-size: var(--font-md);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  /* Align icon and text */
+  align-items: center;
+  /* Vertically center icon and text */
+}
+
+.section-one-article button i {
+  transition: transform 0.3s ease;
+  /* Smooth transition for the icon */
+  margin-left: 0.5rem;
+  /* Space between text and icon */
+}
+
+.section-one-article button:hover i {
+  transform: translateX(1rem);
+  /* Move icon to the right on hover */
+}
+
+
+/* Image Section Styling */
+.section-one-image img {
+  width: 30rem;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  border: solid var(--bg-color-tertiary);
+}
+
+.section-two-container {
+  display: block;
+
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+}
+
+.section-two-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* Space between images */
+  padding: 2rem 0;
+}
+
+.section-two-image img {
+  flex: 1;
+  height: 10rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+
+.section-three-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--text-color);
+  color: var(--bg-color-tertiary);
+}
+
+.section-three-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+
+.section-three-article h1 {
+  font-size: var(--font-xl);
+  color: #62BA1B;
+}
+
+.section-three-article p {
+  font-size: var(--font-md);
+  font-weight: 100;
+}
+
+/* Flex Layout for Evenly Spaced Categories */
+.section-three-article-two {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section-three-article-two {
+    flex-direction: column;
+    border-top: 5px solid #ccc;
+
+  }
+}
+
+.section-three-article-two h1 {
+  color: #62BA1B;
+  font-size: var(--font-xl);
+
+}
+
+.section-three-article-two article {
+  max-width: 500px;
+  text-align: left;
+}
+
+.section-three-article-two article p {
+  font-size: var(--font-md);
+  font-weight: 100;
+}
+
+.section-three-article-two img {
+  width: 35rem;
+  max-width: 100%;
+  /* Controls image size */
+  height: 40rem;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  /* Optional: Rounded corners */
+}
+
+.stat-article {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.stat-article-two {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.stat-article-two h1 {
+  color: #62BA1B;
+  font-size: var(--font-lg);
+  line-height: 1.1;
+}
+
+.stat-article-two button {
+  padding: 1rem 2rem;
+  background-color: #62BA1B;
+  color: var(--text-color);
+  font-family: var(--font-paragraph);
+  font-size: var(--font-md);
+  border: none;
+  border-radius: 5px;
+  gap: .5rem;
+  cursor: pointer;
+  display: inline-flex;
+  /* Ensure the icon and text are aligned */
+  align-items: center;
+  /* Vertically center the content */
+  transition: background-color 0.3s ease;
+  /* Smooth background color transition */
+}
+
+.stat-article-two button:hover {
+  background-color: #4CAF50;
+  /* Optional: Change background color on hover */
+}
+
+.stat-article-two button i {
+  transition: transform 0.3s ease;
+  /* Smooth transition for the icon */
+  margin-left: 0.5rem;
+  /* Optional: Add space between text and icon */
+}
+
+.stat-article-two button:hover i {
+  transform: translateX(-0.8rem);
+  /* Slide the icon to the right on hover */
+}
+
+.stat-article button {
+  padding: 1rem 2rem;
+  background-color: #62BA1B;
+  color: var(--text-color);
+  font-family: var(--font-paragraph);
+  font-size: var(--font-md);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  /* Ensure the icon and text are aligned */
+  align-items: center;
+  /* Vertically center the content */
+  transition: background-color 0.3s ease;
+  /* Smooth background color transition */
+}
+
+.stat-article button:hover {
+  background-color: #4CAF50;
+  /* Optional: Change background color on hover */
+}
+
+.stat-article button i {
+  transition: transform 0.3s ease;
+  /* Smooth transition for the icon */
+  margin-left: 0.5rem;
+  /* Optional: Add space between text and icon */
+}
+
+.stat-article button:hover i {
+  transform: translateX(0.8rem);
+  /* Slide the icon to the right on hover */
+}
+
+.section-four-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.section-four-container h1 {
+  color: #62BA1B;
+  font-size: var(--font-xl);
+}
+
+.sfc-one {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.sfc-two {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows images to wrap on smaller screens */
+  gap: 1rem;
+  justify-content: center;
+}
+
+.sfc-two img {
+  width: calc(33.33% - 1rem);
+  /* Three images per row with some space between */
+  max-width: 20rem;
+  /* Limit the max width */
+  height: auto;
+  aspect-ratio: 2 / 4;
+  /* Keeps the height proportional */
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: blur(5px);
+  /* Adds blur effect */
+  transition: filter 0.3s ease;
+  /* Smooth transition for blur effect */
+}
+
+.sfc-two img:hover {
+  filter: blur(0);
+  /* Removes blur on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sfc-two img {
+    width: calc(50% - 1rem);
+    /* Two images per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sfc-two img {
+    width: calc(100% - 1rem);
+    /* One image per row on small screens */
+  }
+}
+
+.section-five-container {
+  display: flex;
+  justify-content: space-evenly;
+  /* Distribute space evenly */
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  flex-wrap: wrap;
+  /* Ensures elements stack on smaller screens */
+}
+
+.section-five-article {
+  max-width: 20rem;
+  text-align: center;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-five-article h1 {
+  font-size: var(--font-xl);
+  color: #62BA1B;
+}
+
+.section-five-article p {
+  font-size: var(--font-md);
+  font-weight: 100;
+}
+
+.section-five-article button {
+  padding: 1rem 2rem;
+  background-color: #62BA1B;
+  color: var(--text-color);
+  font-family: var(--font-paragraph);
+  font-size: var(--font-md);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section-five-article button:hover {
+  background-color: #4CAF50;
+}
+
+.section-five-article button i {
+  transition: transform 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.section-five-article button:hover i {
+  transform: translateX(0.8rem);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.contact-input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.input-icon input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.contact-icons {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.25rem;
+}
+
+.contact-button-submit {
+  width: 100%;
+  padding: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button-submit:hover {
+  background-color: #0056b3;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.col-md-4 li {
+  list-style-type: none;
+}
+
+
+.fc-section-two {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fc-section-three {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fc-section-four {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
