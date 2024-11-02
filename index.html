@@ -13,6 +13,8 @@
          referrerpolicy="no-referrer"
       />
       <title>BRINGCOLA BOSS Jj</title>
+      <!-- Include ScrollReveal library -->
+      <script src="https://unpkg.com/scrollreveal"></script>
    </head>
    <body>
       <header>
@@ -29,7 +31,7 @@
       </header>
       <main>
          <div class="section-one-container">
-            <section class="section-one-article">
+            <section class="section-one-article" data-scrollreveal="enter from bottom">
                <h3>Hi, I am</h3>
                <span class="section-one-span">
                   <h1>BRINGCOLA <span>BOSS Jj</span></h1>
@@ -39,20 +41,20 @@
                   CONTACT ME<i class="fa-solid fa-arrow-right"></i>
                </button>
             </section>
-            <section class="section-one-image">
-               <img src="./img/BOSSJJYOUNG.jpg" alt="" />
+            <section class="section-one-image" data-scrollreveal="enter from bottom">
+               <img src="./img/BOSSJJYOUNG.jpg" alt="BOSSJJYOUNG" />
             </section>
          </div>
-         <div class="section-two-container">
+         <div class="section-two-container" data-scrollreveal="enter from bottom">
             <h1>Looking A For Player</h1>
             <section class="section-two-image">
-               <img src="./img/LOOKINGFORPLAYER.jpg" alt="" />
                <img src="./img/LOOKINGFORPLAYERONE.jpg" alt="" />
+               <img src="./img/LOOKINGFORPLAYER.jpg" alt="" />
                <img src="./img/COMMISSION.jpg" alt="" />
             </section>
          </div>
          <div class="section-three-container">
-            <section class="section-three-article">
+            <section class="section-three-article" data-scrollreveal="enter from bottom">
                <h1>Legit Online Sabong & Casino Agents</h1>
                <p>
                   Meet Bringcola BOSS Jj, a trusted agent in online gaming for over two years. Known
@@ -61,7 +63,11 @@
                   integrity and success!
                </p>
             </section>
-            <section class="section-three-article-two" id="aboutme">
+            <section
+               class="section-three-article-two"
+               id="aboutme"
+               data-scrollreveal="enter from bottom"
+            >
                <article class="stat-article">
                   <h1>BRINGCOLA BOSS Jj</h1>
                   <p>
@@ -76,7 +82,7 @@
                </article>
                <img src="./img/BOSSJJYOUNG.jpg" alt="Bringcola BOSS Jj" />
             </section>
-            <section class="section-three-article-two">
+            <section class="section-three-article-two" data-scrollreveal="enter from bottom">
                <img src="./img/BOSSJJLEGIT.jpg" alt="Bringcola BOSS Jj" />
                <article class="stat-article-two">
                   <h1>
@@ -97,7 +103,7 @@
                   </button>
                </article>
             </section>
-            <section class="section-three-article-two">
+            <section class="section-three-article-two" data-scrollreveal="enter from bottom">
                <article class="stat-article">
                   <h1>Take the risk or lose the chance</h1>
                   <p>
@@ -114,7 +120,7 @@
                <img src="./img/BOSSJJLEGITPHONE.jpg" alt="Bringcola BOSS Jj" />
             </section>
          </div>
-         <div class="section-four-container" id="legit">
+         <div class="section-four-container" id="legit" data-scrollreveal="enter from bottom">
             <h1>LEGIT TRANSCATIONS</h1>
             <p>
                I'm a full-time, trusted online sabong and casino agent. Scroll through real client
@@ -132,7 +138,7 @@
             </div>
          </div>
          <div class="section-five-container">
-            <section class="section-five-article">
+            <section class="section-five-article" data-scrollreveal="enter from bottom">
                <h1>Ready to work together?</h1>
                <p>
                   I'm always looking for new and exciting ways to work with you. Let's make
@@ -142,7 +148,7 @@
                   CONTACT ME <i class="fa-solid fa-chevron-right"></i>
                </button>
             </section>
-            <section class="form-container" id="contactme">
+            <section class="form-container" id="contactme" data-scrollreveal="enter from bottom">
                <form id="contactForm" onsubmit="handleSubmit(event)">
                   <h2 class="contact-h2">Contact Us</h2>
                   <div class="contact-input-group">
@@ -199,7 +205,7 @@
             </section>
          </div>
 
-         <footer class="footer">
+         <footer class="footer" data-scrollreveal="enter from bottom">
             <div class="footer-container">
                <div class="col-md-4">
                   <h1>Our Hours</h1>
@@ -274,6 +280,28 @@
                alert('Please fill out all fields.');
             }
          }
+
+         // Initialize ScrollReveal
+         ScrollReveal().reveal(
+            '.section-one-container,.stat-article,.stat-article-two, .section-three-container, .section-four-container, footer',
+            {
+               duration: 1000,
+               easing: 'ease-in-out',
+               distance: '50px',
+               opacity: 0,
+               interval: 100,
+            }
+         );
+         ScrollReveal().reveal(
+            ' .section-two-container,.section-three-article, .section-five-container',
+            {
+               duration: 1000,
+               easing: 'ease-in-out',
+               distance: '-50px',
+               opacity: 0,
+               interval: 100,
+            }
+         );
       </script>
    </body>
 </html>
