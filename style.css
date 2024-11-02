@@ -6,6 +6,9 @@
   --text-color: #FFF;
   --bg-color-secondary: #c4c4c4;
   --bg-color-tertiary: #909090;
+  --color-lightgreen: #62BA1B;
+  --color-darkgreen: #4CAF50;
+
 
   --font-title: "Bebas Neue",
     sans-serif;
@@ -14,8 +17,8 @@
   --font-xxl: 7rem;
   --font-xl: 5rem;
   --font-lg: 3rem;
-  --font-m: 2rem;
-  --font-s: 1.5rem;
+  --font-md: 2rem;
+  --font-sm: 1.5rem;
   --font-xs: 1rem;
   --font-xxs: 0.8rem;
 }
@@ -54,7 +57,12 @@ header {
 }
 
 header h1 {
-  font-family: var(--font-paragraph);
+  font-family: var(--font-title);
+  background-color: var(--color-lightgreen);
+  padding: 1rem 5rem;
+  font-weight: 500;
+  font-size: var(--font-md);
+  border-radius: 50px;
 }
 
 header img {
@@ -62,7 +70,10 @@ header img {
   max-width: 100%;
   height: 100%;
   object-fit: contain;
+  border: 2px solid var(--color-darkgreen);
+  border-radius: 50%;
 }
+
 
 ul {
   display: flex;
@@ -95,7 +106,7 @@ nav ul li a::after {
 
 /* Hover Effect */
 nav ul li a:hover {
-  color: #62BA1B;
+  color: var(--color-lightgreen);
   /* Optional: Change text color on hover */
 }
 
@@ -154,10 +165,10 @@ p {
 
 .section-one-article button {
   padding: 1rem 5rem;
-  background-color: #62BA1B;
+  background-color: var(--color-lightgreen);
   color: var(--text-color);
   font-family: var(--font-paragraph);
-  font-size: var(--font-md);
+  font-size: var(--font-sm);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -184,17 +195,14 @@ p {
 .section-one-image img {
   width: 30rem;
   max-width: 100%;
-  height: auto;
+  height: 35rem;
   object-fit: cover;
-  aspect-ratio: 1 / 1;
   border-radius: 0.8rem;
   padding: 2rem;
-  border: solid var(--bg-color-tertiary);
 }
 
 .section-two-container {
   display: block;
-
   flex-direction: column;
   justify-content: center;
   padding: 0 4rem;
@@ -210,10 +218,10 @@ p {
 }
 
 .section-two-image img {
-  flex: 1;
   height: 10rem;
   max-width: 100%;
   object-fit: contain;
+  flex: 1;
 }
 
 
@@ -236,11 +244,11 @@ p {
 
 .section-three-article h1 {
   font-size: var(--font-xl);
-  color: #62BA1B;
+  color: var(--color-lightgreen);
 }
 
 .section-three-article p {
-  font-size: var(--font-md);
+  font-size: var(--font-xm);
   font-weight: 100;
 }
 
@@ -262,7 +270,7 @@ p {
 }
 
 .section-three-article-two h1 {
-  color: #62BA1B;
+  color: var(--color-lightgreen);
   font-size: var(--font-xl);
 
 }
@@ -273,7 +281,7 @@ p {
 }
 
 .section-three-article-two article p {
-  font-size: var(--font-md);
+  font-size: var(--font-xm);
   font-weight: 100;
 }
 
@@ -304,17 +312,17 @@ p {
 }
 
 .stat-article-two h1 {
-  color: #62BA1B;
+  color: var(--color-lightgreen);
   font-size: var(--font-lg);
   line-height: 1.1;
 }
 
 .stat-article-two button {
   padding: 1rem 2rem;
-  background-color: #62BA1B;
+  background-color: var(--color-lightgreen);
   color: var(--text-color);
   font-family: var(--font-paragraph);
-  font-size: var(--font-md);
+  font-size: var(--font-xm);
   border: none;
   border-radius: 5px;
   gap: .5rem;
@@ -328,7 +336,7 @@ p {
 }
 
 .stat-article-two button:hover {
-  background-color: #4CAF50;
+  background-color: var(--color-darkgreen);
   /* Optional: Change background color on hover */
 }
 
@@ -346,10 +354,10 @@ p {
 
 .stat-article button {
   padding: 1rem 2rem;
-  background-color: #62BA1B;
+  background-color: var(--color-lightgreen);
   color: var(--text-color);
   font-family: var(--font-paragraph);
-  font-size: var(--font-md);
+  font-size: var(--font-xm);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -362,7 +370,7 @@ p {
 }
 
 .stat-article button:hover {
-  background-color: #4CAF50;
+  background-color: var(--color-darkgreen);
   /* Optional: Change background color on hover */
 }
 
@@ -387,7 +395,7 @@ p {
 }
 
 .section-four-container h1 {
-  color: #62BA1B;
+  color: var(--color-lightgreen);
   font-size: var(--font-xl);
 }
 
@@ -466,27 +474,27 @@ p {
 
 .section-five-article h1 {
   font-size: var(--font-xl);
-  color: #62BA1B;
+  color: var(--color-lightgreen);
 }
 
 .section-five-article p {
-  font-size: var(--font-md);
+  font-size: var(--font-xm);
   font-weight: 100;
 }
 
 .section-five-article button {
   padding: 1rem 2rem;
-  background-color: #62BA1B;
+  background-color: var(--color-lightgreen);
   color: var(--text-color);
   font-family: var(--font-paragraph);
-  font-size: var(--font-md);
+  font-size: var(--font-xm);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .section-five-article button:hover {
-  background-color: #4CAF50;
+  background-color: var(--color-darkgreen);
 }
 
 .section-five-article button i {
@@ -578,6 +586,7 @@ textarea:focus {
 footer {
   margin-top: 2rem;
   padding: 2rem;
+  background-color: var(--bg-color);
 }
 
 .footer-container {
@@ -585,6 +594,11 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.footer-container h1:hover {
+  color: var(--color-lightgreen);
+  /* Change color of h1 on hover */
 }
 
 .col-md-4 {
